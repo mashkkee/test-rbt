@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,9 +12,9 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-tourism-primary to-tourism-secondary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
+                <span className="text-white font-bold text-lg">G</span>
               </div>
-              <span className="text-2xl font-display font-bold">Otkrijte Svet</span>
+              <span className="text-2xl font-display font-bold">Golemov Put</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Vaš pouzdani partner za nezaboravna putovanja. Otkrijte svet sa nama i stvorite uspomene koje će trajati ceo život.
@@ -38,10 +39,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Brze veze</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Početna</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Početna</Link></li>
               <li><a href="#destinations" className="text-gray-300 hover:text-white transition-colors">Destinacije</a></li>
               <li><a href="#packages" className="text-gray-300 hover:text-white transition-colors">Paketi</a></li>
-              <li><a href="/chat.html" className="text-gray-300 hover:text-white transition-colors">AI Asistent</a></li>
+              <li><Link to="/chat" className="text-gray-300 hover:text-white transition-colors">AI Asistent</Link></li>
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">O nama</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
             </ul>
@@ -77,7 +78,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-tourism-primary" />
-                <p className="text-gray-300">info@otkrijte-svet.com</p>
+                <p className="text-gray-300">info@golemov-put.com</p>
               </div>
             </div>
 
@@ -104,7 +105,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 Otkrijte Svet. Sva prava zadržana.
+              © 2024 Golemov Put. Sva prava zadržana.
             </p>
             <div className="flex items-center space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Uslovi korišćenja</a>

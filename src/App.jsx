@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import FeaturedDestinations from './components/FeaturedDestinations';
 import Footer from './components/Footer';
+import ChatPage from './pages/ChatPage';
+import AgencyPage from './pages/AgencyPage';
 import './index.css';
 
 function App() {
@@ -32,16 +34,18 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <Header />
         <Routes>
           <Route path="/" element={
             <>
+              <Header />
               <Hero />
               <FeaturedDestinations />
+              <Footer />
             </>
           } />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/agency" element={<AgencyPage />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );

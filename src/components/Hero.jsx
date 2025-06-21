@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MapPin, Calendar, Users, Play, ArrowRight, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -223,11 +224,11 @@ const Hero = () => {
                 </div>
                 
                 <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
-                  Otkrijte
+                  Golemov
                   <span 
                     className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"
                   >
-                    Svet
+                    Put
                   </span>
                 </h1>
                 
@@ -238,14 +239,14 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a
-                  href="/chat.html"
+                <Link
+                  to="/chat"
                   className="group inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
                   <Play className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                   Započnite putovanje
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
                 
                 <button className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
                   Istražite destinacije

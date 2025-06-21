@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle, Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,16 +24,16 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-tourism-primary to-tourism-secondary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
+              <span className="text-white font-bold text-lg">G</span>
             </div>
             <span className={`text-2xl font-display font-bold transition-colors ${
               isScrolled ? 'text-gray-800' : 'text-white'
             }`}>
-              Otkrijte Svet
+              Golemov Put
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -72,20 +73,20 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <a 
-              href="/chat.html"
+            <Link 
+              to="/chat"
               className="flex items-center space-x-2 bg-tourism-primary hover:bg-tourism-primary-dark text-white px-4 py-2 rounded-full transition-colors font-medium"
             >
               <MessageCircle className="w-4 h-4" />
               <span>AI Asistent</span>
-            </a>
-            <a 
-              href="/agency.html"
+            </Link>
+            <Link 
+              to="/agency"
               className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-full transition-colors font-medium border border-white/30"
             >
               <Building2 className="w-4 h-4" />
               <span>Agencija</span>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,20 +117,20 @@ const Header = () => {
                 Kontakt
               </a>
               <div className="pt-4 space-y-3">
-                <a 
-                  href="/chat.html"
+                <Link 
+                  to="/chat"
                   className="flex items-center space-x-2 bg-tourism-primary text-white px-4 py-3 rounded-lg font-medium w-full justify-center"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>AI Asistent</span>
-                </a>
-                <a 
-                  href="/agency.html"
+                </Link>
+                <Link 
+                  to="/agency"
                   className="flex items-center space-x-2 border border-tourism-primary text-tourism-primary px-4 py-3 rounded-lg font-medium w-full justify-center"
                 >
                   <Building2 className="w-4 h-4" />
                   <span>Agencija</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
